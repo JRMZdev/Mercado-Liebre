@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+header{
+    background:#EAC926 ;
+}
+
+
+header h2{
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--logo-search {
+    display: flex;
+    flex-direction: row;
+}
+
+.container--logo-search-header  div,
+.container--logo-search-header img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+
+.container--image-banner {
+
+    background-image: url('../images/img-home-banner.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10vh
+
+}
+
+
+.container--logo-search form{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.container--logo-search form input{
+    width: 70%;
+    margin-left: 0.5rem
+
+}
+
+.container--logo-search form .form-button-query{
+    max-width: 100%;
+}
+
+
+.container--logo-search form .search-svg{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    background-color: #ebebeb;
+    border-radius: 3px;
+
+}
+
+
+.container--logo-search form a{
+    width: 15%;
+}
+
+
+
+.container--logo-search img{
+    width: 50%
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    
+}
+
+main{
+    width:90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ebebeb;
+}
+
+main section{
+    flex-direction: column;
+    max-height: 50%;
+}
+
+nav{
+    display: none;
+}
+
+.container--list-1,
+.container--list-2{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h2 svg{
+    height: 1em;
+    width: 1em;
+}
+
+
+.burger-menu{
+     background-color: #1259c3;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.item svg{
+
+    vertical-align: middle;
+    height: 1em;
+    width: 1em;
+}
+
+#query{
+
+  background-color:   #ebebeb;
+}
+
+
+main article{
+    margin-bottom: 10px;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+main article:hover{
+
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+
+}
+
+main img{
+    align-items: center;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.container--header{
+    margin:1rem
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: -4px;
+    border-top: 1px solid #ebebeb ;
+    padding: 15px ;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.container--products > article,
+.container--products > img,
+.container--products > div{
+
+    padding: 15px;
+}
+
+
+.container::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f0d1";
+    position: absolute;
+    color:  #39b54a;
+    font-weight: bold;
+    margin-left:50%;
+    margin-top:-1.8rem;
+    font-size: 16px ;
+    padding: 5px ;
+    border: 1px solid #39b54a ;
+    background-color: #FFF ;
+    border-radius: 50% ;
+    transition: all 1s;    
+}
+
+.container:hover::after{
+    transform: rotate(-90deg);
+}
+
+
+
+.section__p{
+    font-size: 12px;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.container__header{
+    font-size: 24px;
+
+}
+
+.container__p--price{
+    font-size: 18px;
+    width: 30%;
+
+}
+
+.container__p--discount{
+    font-size: 16px;
+    color:#39b54a;
+    width: 70%;
+
+}
+
+.container__p--description{
+    font-size: 16px;
+    display:none
+}
+
+
+article:hover .container__p--description{
+    opacity: 1;
+    display: block;
+}
+
+
+footer{
+    background-color: white;
+}
+
+.article--footer{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.icono{
+    height: 50px;
+    width: 50px;
+}
+
+
+.svg-footer{
+    height: 2em;
+    width: 2em;
+    margin-bottom:10px;
+    fill: #1259c3
+}
+
+footer svg:hover{
+    transition: 1s;
+    fill:lightblue
+ }
+
+ .section--footer-top{
+    margin-bottom: 2rem;
+ }
+
+
+
+/*Breakpoint tablet*/
+
+@media (min-width: 361px){
+
+    main{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     header{
+        width: 100%;
+        max-width: unset;
+    }
+    
+    .burger-menu{
+        display: none
+    }
+
+    .container__p--description{
+        visibility: visible;
+        
+    }
+
+    main article{
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .container--logo-search {
+       display:flex;
+       width: 66.66%;
+    }
+
+    .container--logo-search img{
+        max-width: unset;
+        max-height: 10vh;
+     }
+
+     .container--logo-search form, input{
+        display: flex;
+        max-width: unset;
+        align-self: center;
+     }
+
+
+    .container--logo-search-header h2{
+        width: 33.33%;
+     }
+
+     .container--logo-search-header{
+        display: flex;
+        align-items: center;
+     }
+
+     .container--logo-search button,
+     .container--logo-search svg,
+     .container--logo-search a{
+        max-height: 22px;
+        max-width: 22px;
+     }
+
+     .container--image-banner {
+        height: 15vh
+    
+    }
+
+     nav{
+        display:flex;
+     }
+
+     .container--list-1{
+       width: 50%;
+       display: inline;
+       align-items: center;
+     }
+
+     .container--list-1 ul{
+        text-align: center;
+     }
+     .container--list-1 ul li{
+        display: inline;
+
+     }
+
+     .container--list-2{
+        width:50%;
+        display: inline;
+        align-items: center;
+      }
+
+      .container--list-2 ul{
+        text-align: center;
+     }
+
+      .container--list-2 ul li{
+        display: inline;
+     }
+
+     .container--list-1,
+     .container--list-2{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container--list-1 a,
+    .container--list-2 a{
+        text-decoration: none;
+        display: inline-block;
+        color: #222222;
+        padding: 5px 0;
+        font-size: 16px;
+        
+   }
+
+    main section{
+        display: flex;
+        flex-direction: column;
+    }
+
+     main .container--header{
+        height: 20%;
+     }
+
+     main .container--products{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-self: center;
+     }
+
+    .container--products article{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 35%;
+        min-height: 35% ;
+  
+    }
+    
+
+
+    .container--products>* {
+        flex: 1 1 110px;
+      }
+
+
+     section h2{
+        width: 100%;
+     }
+
+     footer svg:hover{
+        transition: 1s;
+        fill:lightblue
+     }
+
+          
+    .container::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f0d1";
+        position: absolute;
+        color:  #39b54a;
+        font-weight: bold;
+        margin-left:19%;
+        margin-top:-1.8rem;
+        font-size: 16px ;
+        padding: 5px ;
+        border: 1px solid #39b54a ;
+        background-color: #FFF ;
+        border-radius: 50% ;
+        transition: all 1s;    
+    }
+
+    .container:hover::after{
+        transform: rotate(-90deg);
+    }
+
+
+
+}
+
+/*Breakpoint Desktop*/
+
+@media (min-width: 769px){
+
+    main{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     header{
+        width: 100%;
+        max-width: unset;
+    }
+
+    .burger-menu{
+        display: none
+    }
+
+    .container__p--description{
+        visibility: visible;
+        
+    }
+
+    main article{
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .container--logo-search {
+       display:flex;
+       width: 66.66%;
+    }
+
+    .container--logo-search img{
+        max-width: unset;
+        max-height: 10vh;
+     }
+
+     .container--logo-search form{
+        display: flex;
+        max-width: 40%;
+     }
+
+
+
+    .container--logo-search-header h2{
+        width: 33.33%
+     }
+
+     .container--logo-search-header{
+        display: flex;
+        align-items: center;
+     }
+
+          .container--logo-search button,
+     .container--logo-search svg,
+     .container--logo-search a{
+        max-height: 22px;
+        max-width: 22px;
+     }
+
+     .container--image-banner {
+        height: 50vh
+    
+    }
+
+
+     nav{
+        display:flex;
+     }
+
+     .container--list-1{
+       width: 50%;
+       display: inline;
+       align-items: center;
+     }
+
+     .container--list-1 ul{
+        text-align: center;
+     }
+     .container--list-1 ul li{
+        display: inline;
+     }
+
+     .container--list-2{
+        width:50%;
+        display: inline;
+        align-items: center;
+      }
+
+      .container--list-2 ul{
+        text-align: center;
+        text-decoration: none;
+     }
+
+      .container--list-2 ul li{
+        display: inline;
+     }
+
+     
+     .container--list-1,
+     .container--list-2{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container--list-1 a,
+    .container--list-2 a{
+        text-decoration: none;
+        display: inline-block;
+        color: #222222;
+        padding: 5px 0;
+        font-size: 16px;  
+   }
+
+    main section{
+        display: flex;
+        flex-direction: column;
+    }
+
+     main .container--header{
+        height: 20%;
+     }
+
+    
+     main .container--products{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-self: center;
+     }
+
+    .container--products article{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 20%;
+        max-height: 50% ;
+  
+    }
+
+    .container--products>* {
+        flex: 1 1 160px;
+      }
+
+
+     section h2{
+        width: 100%;
+     }
+
+     footer{
+        display: block;
+     }
+
+     footer svg:hover{
+        transition: 1s;
+        fill:lightblue
+     }
+
+     footer .section--footer-top{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+     }
+
+     footer .section--footer-bottom .article--footer{
+        text-align:left;
+        margin-left: unset;
+     }
+
+     
+    .container::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f0d1";
+        position: absolute;
+        color:  #39b54a;
+        font-weight: bold;
+        margin-left:8%;
+        margin-top:-1.8rem;
+        font-size: 16px ;
+        padding: 5px ;
+        border: 1px solid #39b54a ;
+        background-color: #FFF ;
+        border-radius: 50% ;
+        transition: all 1s;    
+    }
+
+    .container:hover::after{
+        transform: rotate(-90deg);
+    }
+
+
+
+}
+
+
+/*Breakpoint Larger Desktop*/
+
+@media (min-width: 1500px){
+
+    main img{
+        align-items: center;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+
+    .container::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f0d1";
+        position: absolute;
+        color:  #39b54a;
+        font-weight: bold;
+        margin-left:15%;
+        margin-top:-1.8rem;
+        font-size: 16px ;
+        padding: 5px ;
+        border: 1px solid #39b54a ;
+        background-color: #FFF ;
+        border-radius: 50% ;
+        transition: all 1s;    
+    }
+
+    .container:hover::after{
+        transform: rotate(-90deg);
+    }
+
+    .container{
+
+        max-width: 90%;
+        max-height: 90%;
+
+    }
+}

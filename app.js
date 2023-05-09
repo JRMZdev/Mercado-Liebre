@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const PORT = process.env.PORT || 3000;
 
-app.listen(8000, () => {
+
+app.listen(3000, () => {
     console.log('Servidor corriendo localhost:8000')
 })
 
@@ -24,6 +26,10 @@ app.get('/register', (req,res) =>{
 app.get('/404', (req,res) =>{
    
     res.send('Error página no encontrada');
+})
+
+app.listen(PORT, () => {
+    console.log('Servidor corriendo ' + PORT)
 })
 
 app.use(express.static('public'));

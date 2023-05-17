@@ -35,7 +35,7 @@ app.get('/404', (req,res) =>{
 })
 
 app.listen(PORT, () => {
-    console.log('Servidor corriendo ' + PORT)
+   console.log('Servidor corriendo ' + PORT)
 })
 
 app.use(express.static('public'));

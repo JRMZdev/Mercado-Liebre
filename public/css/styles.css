@@ -245,6 +245,7 @@ main img{
     font-size: 16px;
     color:#39b54a;
     width: 70%;
+    margin-left: 30%;
 
 }
 
@@ -256,7 +257,15 @@ main img{
 
 article:hover .container__p--description{
     opacity: 1;
-    display: block;
+    display: flex;
+    width:40%;
+    margin-left:30%
+
+}
+
+article:hover .container__p--discount{
+    opacity: 1;
+    display: none;
 }
 
 
@@ -450,6 +459,17 @@ footer svg:hover{
         transition: 1s;
         fill:lightblue
      }
+     
+
+     .container__p--price, .container__p--discount{
+        font-size: 0.8em;
+    
+    }
+
+    .container__p--description{
+        font-size: 0.8em;
+    
+    }
 
           
     .container::after{
@@ -622,6 +642,15 @@ footer svg:hover{
         flex: 1 1 160px;
       }
 
+      .container__p--price, .container__p--discount{
+        font-size: 0.7em;
+    
+    }
+
+    .container__p--description{
+        font-size: 0.7em;
+    
+    }
 
      section h2{
         width: 100%;
@@ -709,5 +738,15 @@ footer svg:hover{
         max-width: 90%;
         max-height: 90%;
 
+    }
+
+    .container__p--price, .container__p--discount{
+        font-size: 1.5em;
+    
+    }
+
+    .container__p--description{
+        font-size: 1.5em;
+    
     }
 }

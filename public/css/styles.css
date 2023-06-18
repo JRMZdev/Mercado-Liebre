@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
+:root {
+
+    /*colors*/
+    --yellow: #EAC926;
+    --light-gray: #ebebeb;
+    --white: white;
+    --blue: #1259c3;
+    --light-blue: lightblue;
+    --green: #39b54a;
+
+     /*other*/
+    --search-icon-size: 30px;
+    --font-size-p:  12px;
+    --font-size-o: 16px;
+
+  }
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -8,9 +26,9 @@
 }
 
 
-
 header{
-    background:#EAC926 ;
+    height: auto;
+    background: var(--yellow);
     position: fixed;
     top: 0;
     width: 100%;
@@ -41,15 +59,15 @@ header h2{
 
 
 
-
 .container--image-banner {
-
+    margin-top: 50%;
+    height: 10vh;
     background-image: url('../images/img-home-banner.jpg');
-    background-size:cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 10vh
-
+    max-width: 100%;
+    width: 100vw;
+    background-position: 50%;
 }
 
 
@@ -61,12 +79,14 @@ header h2{
 
 .container--logo-search form input{
     width: 70%;
-    margin-left: 0.5rem
+    margin-left: 0.5rem;
+    height: var(--search-icon-size);
 
 }
 
 .container--logo-search form .form-button-query{
     max-width: 100%;
+    height: var(--search-icon-size);
 }
 
 
@@ -74,16 +94,17 @@ header h2{
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    background-color: #ebebeb;
+    background-color: var(--light-gray);
     border-radius: 3px;
-
+    font-size: var(--search-icon-size);
+    
 }
 
 
 .container--logo-search form a{
     width: 15%;
+    height: var(--search-icon-size);
 }
-
 
 
 .container--logo-search img{
@@ -93,7 +114,7 @@ header h2{
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;
+    background-color: var(--light-gray);
     
 }
 
@@ -102,7 +123,8 @@ main{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ebebeb;
+    background-color: var(--light-gray);
+    margin-bottom: 1.5rem;
 }
 
 main section{
@@ -130,14 +152,14 @@ h2 svg{
 
 
 .burger-menu{
-     background-color: #1259c3;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     display: block;
     max-width: 50px;
     padding: 15px 0;
     border-radius: 8px;
     text-align: center;
-    font-size: 15px;
+    font-size: calc(var(--search-icon-size)/2);
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
@@ -154,12 +176,12 @@ h2 svg{
 
 #query{
 
-  background-color:   #ebebeb;
+  background-color: var(--light-gray);
 }
 
 
 main article{
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     align-items: center;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -182,11 +204,11 @@ main img{
 
 .container{
     display: flex;
-    background-color: white;
+    background-color: var(--white);
     max-width: 80%;
     max-height: 80%;
     margin-top: -4px;
-    border-top: 1px solid #ebebeb ;
+    border-top: 1px solid var(--light-gray);
     padding: 15px ;
     margin-left: auto;
     margin-right: auto;
@@ -205,14 +227,14 @@ main img{
     font-family: "Font Awesome 6 Free";
     content: "\f0d1";
     position: absolute;
-    color:  #39b54a;
+    color:  var(--green);
     font-weight: bold;
     margin-left:50%;
     margin-top:-1.8rem;
-    font-size: 16px ;
+    font-size: var(--font-size-o);
     padding: 5px ;
-    border: 1px solid #39b54a ;
-    background-color: #FFF ;
+    border: 1px solid  var(--green);
+    background-color: var(--white);
     border-radius: 50% ;
     transition: all 1s;    
     z-index: 0;
@@ -225,32 +247,32 @@ main img{
 
 
 .section__p{
-    font-size: 12px;
+    font-size:var(--font-size-p);
     max-width: 50%;
     max-height: 50%;
 }
 
 .container__header{
-    font-size: 24px;
+    font-size: calc(var(--font-size-o)+8);
 
 }
 
 .container__p--price{
-    font-size: 18px;
+    font-size: calc(var(--font-size-o)+2);
     width: 30%;
 
 }
 
 .container__p--discount{
-    font-size: 16px;
-    color:#39b54a;
+    font-size:var(--font-size-o);
+    color: var(--green);
     width: 70%;
     margin-left: 30%;
 
 }
 
 .container__p--description{
-    font-size: 16px;
+    font-size: var(--font-size-o);
     display:none
 }
 
@@ -270,7 +292,7 @@ article:hover .container__p--discount{
 
 
 footer{
-    background-color: white;
+    background-color: var(--white);
 }
 
 .article--footer{
@@ -289,17 +311,18 @@ footer{
 .svg-footer{
     height: 2em;
     width: 2em;
-    margin-bottom:10px;
-    fill: #1259c3
+    margin-bottom:1.5rem;
+    fill: var(--blue)
 }
 
 footer svg:hover{
     transition: 1s;
-    fill:lightblue
+    fill:var(--light-blue);
  }
 
  .section--footer-top{
     margin-bottom: 2rem;
+    padding-top: 2rem;
  }
 
 
@@ -314,6 +337,7 @@ footer svg:hover{
         margin-right: auto;
     }
      header{
+        height: auto;
         width: 100%;
         max-width: unset;
     }
@@ -328,7 +352,6 @@ footer svg:hover{
     }
 
     main article{
-        margin-bottom: 10px;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
@@ -361,14 +384,15 @@ footer svg:hover{
      .container--logo-search button,
      .container--logo-search svg,
      .container--logo-search a{
-        max-height: 22px;
         max-width: 22px;
      }
 
      .container--image-banner {
-        height: 15vh
+        margin-top: 25%;
+        height: 20vh ;
+     }
+
     
-    }
 
      nav{
         display:flex;
@@ -415,7 +439,7 @@ footer svg:hover{
         display: inline-block;
         color: #222222;
         padding: 5px 0;
-        font-size: 16px;
+        font-size: var(--font-size-o);
         
    }
 
@@ -457,7 +481,6 @@ footer svg:hover{
 
      footer svg:hover{
         transition: 1s;
-        fill:lightblue
      }
      
 
@@ -476,14 +499,13 @@ footer svg:hover{
         font-family: "Font Awesome 6 Free";
         content: "\f0d1";
         position: absolute;
-        color:  #39b54a;
         font-weight: bold;
         margin-left:19%;
         margin-top:-1.8rem;
-        font-size: 16px ;
+        font-size: var(--font-size-o);
         padding: 5px ;
-        border: 1px solid #39b54a ;
-        background-color: #FFF ;
+        border: 1px solid var(--green);
+        background-color: var(--white) ;
         border-radius: 50% ;
         transition: all 1s;    
     }
@@ -493,6 +515,26 @@ footer svg:hover{
     }
 
 
+
+}
+
+
+@media (min-width: 500px){
+
+    .container--image-banner {
+        margin-top: 20%;
+        height: 20vh ;
+     }
+    
+    }
+
+
+@media (min-width: 630px){
+
+.container--image-banner {
+    margin-top: 10%;
+    height: 25vh ;
+ }
 
 }
 
@@ -519,10 +561,6 @@ footer svg:hover{
         
     }
 
-    main article{
-        margin-bottom: 10px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
 
     .container--logo-search {
        display:flex;
@@ -553,15 +591,15 @@ footer svg:hover{
           .container--logo-search button,
      .container--logo-search svg,
      .container--logo-search a{
-        max-height: 22px;
         max-width: 22px;
      }
 
      .container--image-banner {
-        height: 50vh
-    
+        margin-top: 5%;
+        height: 30vh ;
     }
-
+    
+    
 
      nav{
         display:flex;
@@ -609,7 +647,6 @@ footer svg:hover{
         display: inline-block;
         color: #222222;
         padding: 5px 0;
-        font-size: 16px;  
    }
 
     main section{
@@ -662,7 +699,7 @@ footer svg:hover{
 
      footer svg:hover{
         transition: 1s;
-        fill:lightblue
+        fill:var(--light-blue)
      }
 
      footer .section--footer-top{
@@ -681,14 +718,10 @@ footer svg:hover{
         font-family: "Font Awesome 6 Free";
         content: "\f0d1";
         position: absolute;
-        color:  #39b54a;
         font-weight: bold;
         margin-left:8%;
         margin-top:-1.8rem;
-        font-size: 16px ;
         padding: 5px ;
-        border: 1px solid #39b54a ;
-        background-color: #FFF ;
         border-radius: 50% ;
         transition: all 1s;    
     }
@@ -704,7 +737,7 @@ footer svg:hover{
 
 /*Breakpoint Larger Desktop*/
 
-@media (min-width: 1500px){
+@media (min-width: 1200px){
 
     main img{
         align-items: center;
@@ -717,14 +750,10 @@ footer svg:hover{
         font-family: "Font Awesome 6 Free";
         content: "\f0d1";
         position: absolute;
-        color:  #39b54a;
         font-weight: bold;
         margin-left:15%;
         margin-top:-1.8rem;
-        font-size: 16px ;
         padding: 5px ;
-        border: 1px solid #39b54a ;
-        background-color: #FFF ;
         border-radius: 50% ;
         transition: all 1s;    
     }
@@ -749,4 +778,10 @@ footer svg:hover{
         font-size: 1.5em;
     
     }
+
+    .container--image-banner {
+        margin-top: 5%;
+        height: 45vh ;
+    }
+    
 }

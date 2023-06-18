@@ -48,7 +48,7 @@
              <ul class="list-u--1">
                 <li><a href="/">Ofertas</a></li>
                 <li><a href="/">Tiendas Oficiales</a></li>
-                <li><a href="/">Vender</a></li>
+                <li><a href="/vender">Vender</a></li>
                 <li><a href="/">Ayuda</a></li>
              </ul>
          </div><br>
@@ -75,9 +75,8 @@
 
      </header>
  
-     <div class="container--image-banner">
-
-     </div>
+     <section class="container--image-banner">
+    </section>
  
 
 
@@ -85,19 +84,18 @@
 
     <main>
 
-        <h3>Ingresá a tu cuenta</h3>
+        <h3 class="header--login">Ingresá a tu cuenta</h3>
         
-        <form action="/" method="get" class="create-form">
+        <form action="/" method="get" class="login-form">
 
-            <div class="form-div">
+            <div class="form--div-login">
                 <label for="user-name">Nombre de Usuario</label>
-                <input type="text" name="user-name" id="user-name" placeholder="Nombre de usuario" class="form-inputs" minlength="4">
+                <input type="text" name="user-name" id="user-name" placeholder="Nombre de usuario" class="form-inputs" minlength="4" required>
             </div>
-            <span id="user-name-error" class="error-message">El nombre debe tener al menos 3 caracteres</span>
             
-            <div class="form-div">
+            <div class="form--div-login">
                 <label>Introduzca su contraseña:</label>
-                <input type="password" name="password" placeholder="Contraseña" class="form-inputs" minlength="6">
+                <input type="password" name="password" placeholder="Contraseña" class="form-inputs" minlength="6" required>
             </div>
             
             <button type="submit" class="form-button-submit">Login</button>

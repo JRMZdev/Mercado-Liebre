@@ -28,14 +28,9 @@ app.get('/vender', (req,res) =>{
     res.sendFile(path.join(__dirname, '/views/vender.html'));
 })
 
-
-app.get('/404', (req,res) =>{
-   
-    res.send('Error página no encontrada');
-})
-
 app.listen(PORT, () => {
-   console.log('Servidor corriendo ' + PORT)
+ console.log('Servidor corriendo ' + PORT)
 })
+
 
 app.use(express.static('public'));

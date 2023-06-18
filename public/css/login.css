@@ -1,127 +1,102 @@
+
 /* ---------MAIN FORM LOGIN ------- */
 
-main{
-    margin-top: 230px;
-    width: 100vw;
-    height: 600px;
+:root {
+
+    /*colors*/
+    --yellow: #EAC926;
+    --light-gray: #ebebeb;
+    --gray-n2: #9db29f;
+    --white: white;
+    --blue: #1259c3;
+    --blue-n2:  rgb(35, 35, 220);
+    --light-blue: lightblue;
+    --green: #39b54a;
+    --red: red;
+
+     /*other*/
+    --search-icon-size: 30px;
+    --font-size-p:  12px;
+    --font-size-o: 16px;
+
+  }
+
+
+.login-form{
+    display: block;
+    height: 40vh;
+    max-height: 350px;
+    max-width: 500px;
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    border: 5px solid var(--gray-n2);
 }
 
-
-.create-form{
-    padding: 20px 15px;
-    height: 580px;
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    align-content: center;
-    flex-direction: column;
-    margin-bottom: 30px;
+.header--login{
+    margin-bottom: 2rem;
 }
 
-.form-div{
-    margin: 30px 0;
-    text-align: left;
+.form--div-login{
     width: 100%;
-    
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 
-.form-div label{
-    margin-bottom: 10px;
-    display: none;
+.form--div-login label{
     font-style: italic;
     font-weight: bold;
 }
 
-.form-inputs{
+.form--div-login .form-inputs{
     width: 100%;
     height: 50px;
-    padding: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
     border-radius: 15px;
     border: 0;
     transition: all 0.2s;
 }
 
-.form-inputs:hover{
+.form--div-login .form-inputs:hover{
     box-shadow: 0px 0px 10px rgba( 100 , 100 , 100);
 }
 
-.form-inputs:focus{
-    outline:solid 2px #39b54a;
+.form--div-login .form-inputs:focus{
+    outline:solid 2px var(--green);
     transform: scale(1.1);
 }
 
-/* --------PARA MOSTRAR ERROR DE NOMBRE AL USUARIO------ */
-
-.error-message {
-    display: none;
-    color: red;
-  }
-  
-.user-name:invalid + .error-message {
-    display: block;
-}
 
 /* ------------------------------------ */
 
-.form-button-submit{
-    background-color: #39b54a;
+.login-form .form-button-submit{
+ 
+    height: 40px;
+    width: 60%;
+    max-width: 250px;
+    margin: 8px 0;
     border: none;
-    color: white;
+    color: var(--white);
     font-size: 17px;
     padding: 5px 10px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba( 100 , 100 , 100);
-    margin: 8px 0;
+    background-color: var(--green);
     transition: all 0.3s;
     cursor: pointer;
 }
 
 .form-button-submit:hover{
-    background-color: #0022AA;
+    background-color:var(--blue-n2);
 }
 
 
 
-/* -----------MEDIA QUERIES----------- */
-
-
-
-@media (min-width: 361px){
-
-    .form-div .label-mobile{
-        display: block;
-        font-weight: bold;
-    }
-
-    .form-div .radio-labels{
-        display: inline;
-    }
-
-}
-
-@media (min-width: 769px){
-
-    .form-div{
-        width: 70%;  
-    }
-
-    .form-div label{
-        display: block;
-    }
-
-    main input::placeholder{
-        color: white;
-    }
-}
-
-@media (min-width: 1279px){
-
-   
-    .form-div{
-        width: 50%;  
-    }
-
-    .form-div label{
-        display: block;
-    }
-}

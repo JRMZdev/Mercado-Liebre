@@ -141,9 +141,8 @@ nav{
     list-style: none;
     margin: 0;
     padding: 0;
+
 }
-
-
 
 h2 svg{
     height: 1em;
@@ -625,7 +624,7 @@ footer svg:hover{
       }
 
       .container--list-2 ul{
-        text-align: center;
+        margin-left: 8rem;
         text-decoration: none;
      }
 

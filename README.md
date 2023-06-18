@@ -2,7 +2,7 @@
 
 ## Description:
 
-Mercado Li(e)bre is a Website clone for the Marketplace platform Mercado Libre. Built using **HTML** and **CSS**, this is the first version of the project developed in the Full Stack web development boot camp at Digital House at Digital House.
+Mercado Li(e)bre is a Website clone for the Marketplace platform Mercado Libre. Built using **HTML** and **CSS**, this is the first version of the project developed in the Full Stack web development boot camp at Digital House.
 
 [**Project link**](https://mercado-liebre-ohsj.onrender.com/)
 

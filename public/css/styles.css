@@ -736,7 +736,7 @@ footer svg:hover{
 
 /*Breakpoint Larger Desktop*/
 
-@media (min-width: 1200px){
+@media (min-width: 1024px){
 
     main img{
         align-items: center;
@@ -750,7 +750,7 @@ footer svg:hover{
         content: "\f0d1";
         position: absolute;
         font-weight: bold;
-        margin-left:15%;
+        margin-left:10%;
         margin-top:-1.8rem;
         padding: 5px ;
         border-radius: 50% ;
@@ -769,12 +769,12 @@ footer svg:hover{
     }
 
     .container__p--price, .container__p--discount{
-        font-size: 1.5em;
+        font-size: 1.2em;
     
     }
 
     .container__p--description{
-        font-size: 1.5em;
+        font-size: 1.2em;
     
     }
 
@@ -782,5 +782,21 @@ footer svg:hover{
         margin-top: 5%;
         height: 45vh ;
     }
+    
+}
+
+
+
+
+/*Breakpoint Larger Desktop*/
+
+@media (min-width: 1279px){
+
+
+
+    .container::after{
+        margin-left:12%; 
+    }
+
     
 }

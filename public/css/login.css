@@ -24,8 +24,8 @@
 
 .login-form{
     display: block;
-    height: 40vh;
-    max-height: 350px;
+    height: 55vh;
+    max-height: 400px;
     max-width: 500px;
     padding: 10px 15px;
     margin-left: auto;
@@ -35,6 +35,7 @@
 }
 
 .header--login{
+    margin-top:1rem;
     margin-bottom: 2rem;
 }
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02a186c356.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Mercado Liebre</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header')%>
+
+        <section class="container--image-banner">
+        </section>
+
+
+
+        <!-- -------- MAIN FORM LOGIN ------------>
+
+        <main>
+
+            <h3 class="header--login">Ingresá a tu cuenta</h3>
+
+            <form action="/" method="get" class="login-form">
+
+                <div class="form--div-login">
+                    <label for="user-name">Nombre de Usuario</label>
+                    <input type="text" name="user-name" id="user-name" placeholder="Nombre de usuario"
+                        class="form-inputs" minlength="4" required>
+                </div>
+
+                <div class="form--div-login">
+                    <label>Introduzca su contraseña:</label>
+                    <input type="password" name="password" placeholder="Contraseña" class="form-inputs" minlength="6"
+                        required>
+                </div>
+
+                <button type="submit" class="form-button-submit">Login</button>
+
+
+            </form>
+
+        </main>
+
+        <%- include('../partials/footer')%>
+
+</body>
+
+</html>

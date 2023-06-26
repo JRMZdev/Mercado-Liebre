@@ -1,0 +1,12 @@
+[
+ {
+  "title": "Cafetera",
+  "price": 250000,
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "Cafetera-test",
+  "discount": 1,
+  "image":"img_cafetera-jpg",
+  "id": 2
+ }
+]

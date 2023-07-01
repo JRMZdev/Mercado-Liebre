@@ -15,6 +15,8 @@
     --search-icon-size: 30px;
     --font-size-p:  12px;
     --font-size-o: 16px;
+    --font-size-h: 18px;
+    --font-size-tablet: 13px;
 
   }
 
@@ -58,16 +60,18 @@ header h2{
 }
 
 
+.container--logo-search-header h2{
+    font-size: 1rem;
+}
+
 
 .container--image-banner {
-    margin-top: 50%;
-    height: 10vh;
     background-image: url('../images/img-home-banner.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 100%;
     width: 100vw;
-    background-position: 50%;
+    background-position: center 100%;
 }
 
 
@@ -105,6 +109,11 @@ header h2{
     width: 15%;
     height: var(--search-icon-size);
 }
+
+.container--logo-search-header h2{
+    font-size: 0.8rem;
+ }
+
 
 
 .container--logo-search img{
@@ -252,12 +261,12 @@ main img{
 }
 
 .container__header{
-    font-size: calc(var(--font-size-o)+8);
+    font-size: calc(var(--font-size-o)*(1.4));
 
 }
 
 .container__p--price{
-    font-size: calc(var(--font-size-o)+2);
+    font-size: calc(var(--font-size-o)*(1.1));
     width: 30%;
 
 }
@@ -387,8 +396,8 @@ footer svg:hover{
      }
 
      .container--image-banner {
-        margin-top: 25%;
-        height: 20vh ;
+        margin-top: 10%;
+        height: 15vh ;
      }
 
     
@@ -499,7 +508,7 @@ footer svg:hover{
         content: "\f0d1";
         position: absolute;
         font-weight: bold;
-        margin-left:19%;
+        margin-left:16%;
         margin-top:-1.8rem;
         font-size: var(--font-size-o);
         padding: 5px ;
@@ -513,6 +522,10 @@ footer svg:hover{
         transform: rotate(-90deg);
     }
 
+    article .container{
+        font-size: var(--font-size-tablet);
+    }
+
 
 
 }
@@ -521,7 +534,7 @@ footer svg:hover{
 @media (min-width: 500px){
 
     .container--image-banner {
-        margin-top: 20%;
+        margin-top: 8%;
         height: 20vh ;
      }
     
@@ -531,8 +544,12 @@ footer svg:hover{
 @media (min-width: 630px){
 
 .container--image-banner {
-    margin-top: 10%;
-    height: 25vh ;
+    margin-top: 1%;
+    height: 24vh ;
+ }
+
+ article .container{
+    font-size: var(--font-size-o);
  }
 
 }
@@ -579,7 +596,8 @@ footer svg:hover{
 
 
     .container--logo-search-header h2{
-        width: 33.33%
+        width: 33.33%;
+        font-size: 1.7rem;
      }
 
      .container--logo-search-header{
@@ -774,13 +792,13 @@ footer svg:hover{
     }
 
     .container__p--description{
-        font-size: 1.2em;
+        font-size: 1em;
     
     }
 
     .container--image-banner {
-        margin-top: 5%;
-        height: 45vh ;
+        margin-top: 1%;
+        height: 35vh ;
     }
     
 }
@@ -800,3 +818,24 @@ footer svg:hover{
 
     
 }
+
+@media (min-width: 1400px){
+
+
+    .container--image-banner {
+        margin-top: 1%;
+        height: 45vh ;
+    }
+
+    .container::after{
+        margin-left:14%; 
+    }
+
+    article .container{
+        font-size: calc(var(--font-size-o)*(1.5));
+     }
+    
+
+    
+}
+

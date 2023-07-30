@@ -4,12 +4,28 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const requestlogger = require('morgan');
+
+//------ Login Mw -------//
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const sessionLogin = require('./middlewares/userLoginMw');
 
 //Use HTTP methods: PATCH, DELETE Y PUT//
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride ("_method"))
+
+//------- Loggin Control -----//
+app.use(requestlogger('dev')); 
+app.use(session ({
+  secret: "MLi-e-ebre",
+  resave: false,
+  saveUninitialized: false
+}))
+app.use(cookieParser());
+app.use(sessionLogin); 
 
 //Require Routes
 
@@ -21,7 +37,6 @@ const userRoutes = require('./routes/userRoutes');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-
 //Set views engine
 app.set('view engine', 'ejs');
 
@@ -30,7 +45,6 @@ app.set('view engine', 'ejs');
 app.use(mainRoutes);
 app.use('/user',userRoutes);
 app.use('/product',productsRoutes);
-
 
 //Normalize PORT
 const port = process.env.PORT || '3000';
@@ -42,6 +56,5 @@ app.use((req, res)=>{
 app.listen(port, () => { 
   console.log(`Server running in ${port} port`); 
 });
-
 
 module.exports = app;

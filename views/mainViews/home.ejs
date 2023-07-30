@@ -27,49 +27,34 @@
 
         </section>
         <main>
-
             <section>
                 <div class="container--header">
                     <h2 class="">Basado en tu última visita</h2>
                 </div>
                 <div class="container--products">
-                    <article>
-                        <img src="/images/products/img-cafetera-moulinex.jpg">
-                        <div class="container">
-                            <p class="container__p--price">$6.770</p>
-                            <p class="container__p--discount">40% off</p>
 
-                            <p class="container__p--description"><strong>Cafetera Moulinex</strong></p>
+                    <% products.forEach(product=> { %>
+                        <%if (product.id <=4) { %>
 
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/products/img-macbook-pro-2019.jpg">
-                        <div class="container">
+                            <article>
+                                <img src="<%= product.image %>" alt="imagen producto">
+                                <div class="container">
+                                    <p class="container__p--price">$<%= product.price %>
+                                    </p>
+                                    <p class="container__p--discount">
+                                        <%= product.discount %>% off
+                                    </p>
 
-                            <p class="container__p--price">$230.000</p>
-                            <p class="container__p--discount">20% off</p>
-                            <p class="container__p--description"><strong>MacBook Pro 2019</strong></p>
-                            <div>
-                    </article>
+                                    <p class="container__p--description"><strong>
+                                            <%= product.title %>
+                                        </strong></p>
 
-                    <article>
-                        <img src="/images/products/img-samsung-galaxy-s10.jpg">
-                        <div class="container">
+                                </div>
+                            </article>
 
-                            <p class="container__p--price">$70.500</p>
-                            <p class="container__p--discount">10% off</p>
-                            <p class="container__p--description"><strong>Samsung Galaxy S10</strong></p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/products/img-tv-samsung-smart.jpg">
-                        <div class="container">
-                            <p class="container__p--price">$23.200</p>
-                            <p class="container__p--discount">5% off</p>
-                            <p class="container__p--description"><strong>SmartTv Samsung 43"</strong></p>
-                        </div>
-                    </article>
+                            <%}%>
+                                <% }) %>
+
                 </div>
             </section>
             <section>
@@ -77,39 +62,26 @@
                     <h2>Ofertas</h2>
                 </div>
                 <div class="container--products">
-                    <article>
-                        <img src="/images/products/img-cafetera-moulinex.jpg">
-                        <div class="container">
-                            <p class="container__p--price">$6.770</p>
-                            <p class="container__p--discount">40% off</p>
-                            <p class="container__p--description"><strong>Cafetera Moulinex</strong></p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/products/img-macbook-pro-2019.jpg">
-                        <div class="container">
-                            <p class="container__p--price">$230.000</p>
-                            <p class="container__p--discount">20% off</p>
-                            <p class="container__p--description"><strong>MacBook Pro 2019</strong></p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/products/img-samsung-galaxy-s10.jpg">
-                        <div class="container">
-                            <p class="container__p--price">$70.500</p>
-                            <p class="container__p--discount">10% off</p>
-                            <p class="container__p--description"><strong>Samsung Galaxy S10</strong></p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/products/img-tv-samsung-smart.jpg">
-                        <div class="container">
 
-                            <p class="container__p--price">$23.200</p>
-                            <p class="container__p--discount">5% off</p>
-                            <p class="container__p--description"><strong>SmartTv Samsung 43"</strong></p>
-                        </div>
-                    </article>
+                    <% products.forEach(product=> { %>
+                        <%if (product.id>4) { %>
+
+                            <article>
+                                <img src="<%= product.image %>" alt="imagen producto">
+                                <div class="container">
+                                    <p class="container__p--price">$<%= product.price %>
+                                    </p>
+                                    <p class="container__p--discount">
+                                        <%= product.discount %>% off
+                                    </p>
+
+                                    <p class="container__p--description"><strong>
+                                            <%= product.title %>
+                                        </strong></p>
+                                </div>
+                            </article>
+                            <%}%>
+                                <% }) %>
                 </div>
             </section>
         </main>

@@ -21,6 +21,10 @@ const uploadFile = multer({storage});
 routes.get('/vender', productsController.getProductPublicationForm);
 
 
+//Get available products, to be replaced with mainController home route
+//routes.get('/',productsController.getProducts);
+
+
 //Post product obtained from vender form
 routes.post('/vender-producto', uploadFile.single('image'), productsController.createProduct);
 

@@ -27,11 +27,11 @@
 
             <h3 class="header--login">Ingresá a tu cuenta</h3>
 
-            <form action="/" method="get" class="login-form">
+            <form action="/user/user-session" method="POST" class="login-form">
 
                 <div class="form--div-login">
-                    <label for="user-name">Nombre de Usuario</label>
-                    <input type="text" name="user-name" id="user-name" placeholder="Nombre de usuario"
+                    <label for="user-name">Nombre de Usuario ó Email</label>
+                    <input type="text" name="email" id="user-name" placeholder="Nombre de usuario"
                         class="form-inputs" minlength="4" required>
                 </div>
 

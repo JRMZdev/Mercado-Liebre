@@ -1,8 +1,15 @@
 [
-    {
-     "id": "1",
-     "name_data": {
-      "full_name": "user-test"
-     }
-    }
+ {
+  "name": "usuario",
+  "user_name": "usuarioDePrueba",
+  "email": "usuarioDePrueba@mliebre.com",
+  "birth-date": "1990-02-02",
+  "address": "Medellín cra 70 #40",
+  "user_type": "Comprador",
+  "intereses": "electro",
+  "password": "abc2023",
+  "password-re": "abc2023",
+  "user_image": "default-user-photo.png",
+  "id": "8efa4074-ac48-4afc-8bb7-e1ac7ae825f9"
+ }
 ]

@@ -1,26 +1,35 @@
+const fs = require('fs');
+const path = require('path');
 const productModel = require('../models/products');
 
 const controller = {
 
     getProductPublicationForm: (req, res) => {
-
         res.render('productsViews/vender')
-
     },
 
     createProduct: (req, res) => {
-        let newData = req.body;
+        let productData = req.body;
 
-        newData.price = Number(newData.price);
-        newData.discount = Number(newData.discount);
-        newData.image = req.file ? req.file.filename : "default-product-image.jpg";
+        productData.title = productData.title
+        productData.price = Number(productData.price);
+        productData.discount = Number(productData.discount);
+        productData.image = req.file ? "/images/products/" + req.file.filename : "/images/products/default-product-image.";
 
-        productModel.createOne(newData);
+        productModel.createOne(productData);
 
         res.redirect('/');
-    }
-};
+    },
 
+    getProducts: (req, res) => {
+        const products = productModel.findAll();
+
+        res.render('/', {
+            title: 'Products',
+            products
+        });
+    },
+};
 
 
 module.exports = controller;

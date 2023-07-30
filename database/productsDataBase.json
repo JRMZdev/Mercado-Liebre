@@ -1,12 +1,82 @@
 [
  {
-  "title": "Cafetera",
-  "price": 250000,
+  "title": "Cafetera Moulinex",
+  "price": "6.770",
   "category": "electro",
   "Ciudad": "Medellin",
   "description": "Cafetera-test",
-  "discount": 1,
-  "image":"img_cafetera-jpg",
+  "discount": 40,
+  "image": "/images/products/img-cafetera-moulinex.jpg",
+  "id": 1
+ },
+ {
+  "title": "MacBook Pro 2019",
+  "price": "230.000",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 20,
+  "image": "/images/products/img-macbook-pro-2019.jpg",
   "id": 2
+ },
+ {
+  "title": "Samsung Galaxy S10",
+  "price": "70.500",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 10,
+  "image": "/images/products/img-samsung-galaxy-s10.jpg",
+  "id": 3
+ },
+ {
+  "title": "SmartTv Samsung 43",
+  "price": "23.200",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 5,
+  "image": "/images/products/img-tv-samsung-smart.jpg",
+  "id": 4
+ },
+ {
+  "title": "Cafetera Moulinex",
+  "price": "6.770",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "Cafetera-test",
+  "discount": 40,
+  "image": "/images/products/img-cafetera-moulinex.jpg",
+  "id": 5
+ },
+ {
+  "title": "MacBook Pro 2019",
+  "price": "230.000",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 20,
+  "image": "/images/products/img-macbook-pro-2019.jpg",
+  "id": 6
+ },
+ {
+  "title": "Samsung Galaxy S10",
+  "price": "70.500",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 10,
+  "image": "/images/products/img-samsung-galaxy-s10.jpg",
+  "id": 7
+ },
+ {
+  "title": "SmartTv Samsung 43",
+  "price": "23.200",
+  "category": "electro",
+  "Ciudad": "Medellin",
+  "description": "",
+  "discount": 5,
+  "image": "/images/products/img-tv-samsung-smart.jpg",
+  "id": 8
  }
 ]

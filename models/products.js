@@ -1,5 +1,5 @@
 const path = require('path');
-const productFilePath = path.resolve('../mercadoliebre/dataBase/productsDataBase.json');
+//const productFilePath = path.resolve('../mercadoliebre/dataBase/productsDataBase.json');
 const fs = require('fs');
 
 const models = {
@@ -11,7 +11,7 @@ const models = {
     //Find all products available on the JSON database
 
     findAll: function () {
-        const productsJSON = fs.readFileSync(productFilePath , 'utf-8')
+        const productsJSON = fs.readFileSync(`./dataBase/productsDataBase.json` , 'utf-8')
         const products = JSON.parse(productsJSON);
 
         return products;
@@ -29,7 +29,7 @@ const models = {
 
         const productsJSON = JSON.stringify(products, null, " ");
 
-        fs.writeFileSync(productFilePath, productsJSON);
+        fs.writeFileSync(`./dataBase/productsDataBase.json`, productsJSON);
 
        
     }

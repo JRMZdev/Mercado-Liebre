@@ -6,7 +6,7 @@ const userModel = require('../models/User.js');
 const controller = {
 
 	getLogin: (req, res) => {
-		return res.render('userViews/login', { title: "Login" });
+		return res.render('userViews/login', { title: "Login" });	
 	},
 
 
@@ -29,6 +29,7 @@ const controller = {
 	loginUser: (req, res) => {
 
 		let user = userModel.findByField('email', req.body.email);
+
 
 		if (!user) {
 			user = userModel.findByField('user_name', req.body.email);

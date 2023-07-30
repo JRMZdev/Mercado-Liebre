@@ -1,16 +1,17 @@
 const path = require('path');
+const productFilePath = path.join(__dirname, '../dataBase/productsDataBase.json');
 const fs = require('fs');
 
 const models = {
 
     //Products database route
 
-    route: '../dataBase/productsDataBase.json',
+  //  route: '../dataBase/productsDataBase.json',
 
     //Find all products available on the JSON database
 
     findAll: function () {
-        const productsJSON = fs.readFileSync(path.join(__dirname, this.route), 'utf-8')
+        const productsJSON = fs.readFileSync(productFilePath , 'utf-8')
         const products = JSON.parse(productsJSON);
 
         return products;
@@ -28,7 +29,9 @@ const models = {
 
         const productsJSON = JSON.stringify(products, null, " ");
 
-        fs.writeFileSync(path.join(__dirname, this.route), productsJSON);
+        fs.writeFileSync(productFilePath, productsJSON);
+
+       
     }
 
 

@@ -1,13 +1,14 @@
 const path = require('path');
 const fs = require('fs');
+const userFilePath = path.join(__dirname, '../database/usersDataBase.json');
 const uuid = require('uuid');
 
 const models = {
 
-    route: '../database/usersDataBase.json',
+   // route: '../database/usersDataBase.json',
 
     findAll: function () {
-        const usersJSON = fs.readFileSync(path.join(__dirname, this.route), 'utf-8')
+        const usersJSON = fs.readFileSync(userFilePath, 'utf-8')
         const users = JSON.parse(usersJSON);
 
         return users;
@@ -35,7 +36,7 @@ const models = {
 
         const usersJSON = JSON.stringify(users, null, ' ');
 
-        fs.writeFileSync(path.join(__dirname, this.route), usersJSON);
+        fs.writeFileSync(userFilePath, usersJSON);
 
         return newUser;
     },

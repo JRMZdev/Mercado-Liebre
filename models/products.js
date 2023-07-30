@@ -1,5 +1,5 @@
 const path = require('path');
-const productFilePath = path.join(__dirname, '../dataBase/productsDataBase.json');
+const productFilePath = path.resolve('../mercadoliebre/dataBase/productsDataBase.json');
 const fs = require('fs');
 
 const models = {

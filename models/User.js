@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const userFilePath = path.join(__dirname, '../database/usersDataBase.json');
+const userFilePath = path.resolve('../mercadoliebre/dataBase/usersDataBase.json');
 const uuid = require('uuid');
 
 const models = {

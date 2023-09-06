@@ -11,5 +11,18 @@
   "password-re": "abc2023",
   "user_image": "default-user-photo.png",
   "id": "8efa4074-ac48-4afc-8bb7-e1ac7ae825f9"
- }
+ },
+ {
+    "name": "usuario Dos",
+    "user_name": "usuarioDePrueba2",
+    "email": "usuarioDePrueba2@mliebre.com",
+    "birth-date": "1990-02-02",
+    "address": "Medellín cra 10 #40",
+    "user_type": "Comprador",
+    "intereses": "electro",
+    "password": "abc2023",
+    "password-re": "abc2023",
+    "user_image": "default-user-photo.png",
+    "id": "8efa4074-ac48-4afc-8bb7-e1ac7ae825f9"
+   }
 ]

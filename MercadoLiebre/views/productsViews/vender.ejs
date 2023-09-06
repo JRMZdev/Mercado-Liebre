@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/vender.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/02a186c356.js" crossorigin="anonymous"></script>
+
+
+    <title>Mercado Liebre</title>
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+
+        <section class="container--image-banner">
+
+        </section>
+        <main>
+
+            <h3>Crear producto para la venta</h3>
+
+            <form action="/product/vender-producto" method="POST" class="create-form" enctype="multipart/form-data">
+
+                <div class="form-div">
+                    <label>Nombre del producto:</label>
+                    <input type="text" name="title"  class="form-inputs" placeholder="Nombre del producto" required />
+                </div>
+                <div class="form-div">
+                    <label>Precio:</label>
+                    <input type="number" name="price" class="form-inputs" min="100" max="100000"  placeholder="ej. 899" required/>
+                </div>
+                <div class="form-div" id="img-product">
+                    <label class="label-mobile">Añadir imagen del producto:</label>
+                    <input class="form-inputs" type="file" name="image" accept="image/*" required>
+                </div>
+                <div class="form-div">
+                    <label id="sub-titles">Categoría:</label>
+                    <select name="category" class="form-inputs">
+                        <option value="hogar">Hogar</option>
+                        <option value="electro">Electro</option>
+                        <option value="indumentaria">Indumentaria</option>
+                    </select>
+                </div>
+                <div class="form-div">
+                    <label id="sub-titles">Ciudad:</label>
+                    <select name="Ciudad" id="" class="form-inputs">
+                        <option value="Medellín">Medellín</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Bogotá">Bogotá</option>
+                    </select>
+                </div>
+                <div class="form-div">
+                    <label id="sub-titles">Descripción del producto</label>
+                    <input  type="text" name="description"  id="descripcion-del-producto"
+                        class="form-inputs" placeholder="Escriba aquí"/>
+                </div>
+                <div class="form-div">
+                    <label id="sub-titles">Valor del porcentaje de descuento online:</label>
+                    <div id="div-radio">
+                        <input type="number" name="discount"  class="input-sale" min="1" max="99" placeholder="1"  required />
+                    </div>
+
+                    <button type="submit" class="form-button-submit">Guardar</button>
+                    <button type="reset" class="form-button-reset">Resetear</button>
+
+            </form>
+
+        </main>
+
+        <%- include('../partials/footer')%>
+
+</body>
+
+</html>
